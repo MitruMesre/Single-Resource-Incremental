@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Single Resource Incremental</title>
+</head>
+
+<body style="background-color: #333; color: whitesmoke">
+    <button onclick="gainMana()">Gain <span id="manaClickAmount">0</span> Mana</button>
+    <table>
+        <tr>
+            <th>Resource</th>
+            <th>Amount</th>
+            <th>Per Second</th>
+        </tr>
+        <tr>
+            <td>Mana</td>
+            <td id="manaAmount">0</td>
+            <td><span id="manaPerSecond">0</span>/s</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Building</th>
+            <th>Amount</th>
+            <th>Mana Cost</th>
+            <th>Effect</th>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.buildings.magicWand.build()">Magic Wand</button></td>
+            <td id="magicWandAmount">0</td>
+            <td id="magicWandManaCost">0</td>
+            <td>+<span id="magicWandEffect">0</span> Mana/s</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.buildings.crystalCave.build()">Crystal Cave</button></td>
+            <td id="crystalCaveAmount">0</td>
+            <td id="crystalCaveManaCost">0</td>
+            <td>+<span id="crystalCaveEffect">0</span> Mana/s</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.buildings.wizardTower.build()">Wizard Tower</button></td>
+            <td id="wizardTowerAmount">0</td>
+            <td id="wizardTowerManaCost">0</td>
+            <td>+<span id="wizardTowerEffect">0</span> Mana/s</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.buildings.enchantedForest.build()">Enchanted Forest</button></td>
+            <td id="enchantedForestAmount">0</td>
+            <td id="enchantedForestManaCost">0</td>
+            <td>+<span id="enchantedForestEffect">0</span> Mana/s</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.buildings.alchemyLab.build()">Alchemy Lab</button></td>
+            <td id="alchemyLabAmount">0</td>
+            <td id="alchemyLabManaCost">0</td>
+            <td>+<span id="alchemyLabEffect">0</span> Mana/s</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.buildings.dragonLair.build()">Dragon Lair</button></td>
+            <td id="dragonLairAmount">0</td>
+            <td id="dragonLairManaCost">0</td>
+            <td>+<span id="dragonLairEffect">0</span> Mana/s</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Upgrade</th>
+            <th>Mana Cost</th>
+            <th>Effect</th>
+            <th>Purchased</th>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaChanneling.purchase()">Mana Channeling</button></td>
+            <td>500</td>
+            <td>Increases the Mana per Second of all buildings by 5%.</td>
+            <td id="manaChannelingPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaAmplification.purchase()">Mana Amplification</button></td>
+            <td>2,500</td>
+            <td>Increases the Mana per Second of all buildings by 10%.</td>
+            <td id="manaAmplificationPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaMultiplication.purchase()">Mana Multiplication</button></td>
+            <td>10,000</td>
+            <td>Increases the Mana per Second of all buildings by 20%.</td>
+            <td id="manaMultiplicationPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaRegeneration.purchase()">Mana Regeneration</button></td>
+            <td>25,000</td>
+            <td>Increases Mana per Second by 1% of your current Mana.</td>
+            <td id="manaRegenerationPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaFusion.purchase()">Mana Fusion</button></td>
+            <td>100,000</td>
+            <td>Increases the Mana per Second of all buildings by 50%.</td>
+            <td id="manaFusionPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaExplosion.purchase()">Mana Explosion</button></td>
+            <td>250,000</td>
+            <td>Increases the Mana gained from clicking by 1% of your current Mana.</td>
+            <td id="manaExplosionPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaAscension.purchase()">Mana Ascension</button></td>
+            <td>500,000</td>
+            <td>Increases the Mana per Second of all buildings by 100%.</td>
+            <td id="manaAscensionPurchased">false</td>
+        </tr>
+        <tr>
+            <td><button onclick="gameData.upgrades.manaInfinity.purchase()">Mana Infinity</button></td>
+            <td>1,000,000</td>
+            <td>Increases the Mana per Second of all buildings by 1000%.</td>
+            <td id="manaInfinityPurchased">false</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Goal: Reach 1,000,000,000 Mana. <span id="wonMessage"></span></h2>
+    <script src="script.js"></script>
+</body>
+
+</html>
